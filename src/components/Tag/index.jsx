@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.scss';
+import PropTypes from 'prop-types';
 
 const Tag = ({ text }) => {
   return (
@@ -8,5 +9,7 @@ const Tag = ({ text }) => {
     </div>
   );
 };
-
+Tag.propTypes = {
+  text: PropTypes.string.isRequired,
+};
 export default Tag;

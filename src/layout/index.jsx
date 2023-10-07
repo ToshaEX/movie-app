@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import './index.scss';
 
 const Loading = lazy(() => import('../components/Loading'));
@@ -9,7 +9,11 @@ const Layout = ({ children, isLoading }) => {
   return (
     <main className="main-outer">
       <NavBar />
-      {isLoading ? <Loading /> : children}
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+      )}
     </main>
   );
 };

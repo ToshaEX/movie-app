@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { lazy, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Layout from '../../layout';
 import { useQuery } from 'react-query';
 import { apiClient } from '../../services';
-import Tag from '../../components/Tag';
 import './index.scss';
+
+const Tag = lazy(() => import('../../components/Tag'));
 
 const MovieView = () => {
   const { id } = useParams();

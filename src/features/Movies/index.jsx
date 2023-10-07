@@ -1,9 +1,10 @@
-import React from 'react';
-import Layout from '../../layout';
+import React, { lazy } from 'react';
 import { useQuery } from 'react-query';
 import { apiClient } from '../../services';
-import MovieCard from '../../components/MovieCard';
 import './index.scss';
+
+const Layout = lazy(() => import('../../layout'));
+const MovieCard = lazy(() => import('../../components/MovieCard'));
 
 const Movies = () => {
   const { isLoading, data } = useQuery(
@@ -20,7 +21,12 @@ const Movies = () => {
         <div className="movies-header">Trending Movies</div>
         <div className="movies-container">
           {data?.data?.results?.map(({ poster_path, title, id }) => (
-            <MovieCard path={poster_path} title={title} movie_id={id} />
+            <MovieCard
+              path={poster_path}
+              title={title}
+              movie_id={id}
+              key={`movie-card-${id}`}
+            />
           ))}
         </div>
       </div>

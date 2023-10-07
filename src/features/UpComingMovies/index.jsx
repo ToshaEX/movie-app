@@ -11,7 +11,7 @@ const UpComingMovie = () => {
     async () => {
       return await apiClient.get(`movie/upcoming?language=en-US&page=1`);
     },
-    { retry: false },
+    { retry: false, refetchInterval: 10000 },
   );
 
   return (
