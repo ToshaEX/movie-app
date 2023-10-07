@@ -1,0 +1,73 @@
+.movie-view-backdrop {
+  position: absolute;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background: rgba(0, 0, 5, 0.507);
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: multiply;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.movie-view-container {
+  position: relative;
+  height: 92vh;
+  width: 100vw;
+}
+
+.movie-view-detail-container {
+  display: flex;
+  flex: 1;
+  height: 92vh;
+  justify-content: center;
+  align-items: center;
+}
+.movie-view-card {
+  display: flex;
+  z-index: 10;
+  max-width: 70vw;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: black;
+  padding: 2rem;
+}
+.movie-view-description {
+  display: flex;
+  flex-direction: column;
+}
+.movie-view-title {
+  color: white;
+  font-size: xx-large;
+  padding-bottom: 1rem;
+}
+.movie-view-overview {
+  color: lightgray;
+  font-size: x-large;
+}
+.movie-view-release-date {
+  color: gray;
+  font-size: x-large;
+  padding-bottom: 0.5rem;
+}
+
+.movie-view-vote-average {
+  color: gray;
+  font-size: 3rem;
+}
+
+.movie-view-tag {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.movie-view-poster {
+  position: relative;
+  max-width: 400px;
+  max-height: 600px;
+}

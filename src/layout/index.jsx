@@ -7,7 +7,10 @@ const Layout = ({ children, isLoading }) => {
   return (
     <main className="main-outer">
       <NavBar />
-      {isLoading ? <div>Loading</div> : children}
+      {
+        //TODO: Add loading animation
+        isLoading ? <div>Loading</div> : children
+      }
     </main>
   );
 };
