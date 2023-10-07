@@ -1,17 +1,17 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { apiClient } from '../../services';
 import Layout from '../../layout';
 import './index.scss';
 
 const UpComingMovie = () => {
   const { isLoading, data } = useQuery(
-    'query-up-comings',
+    ['query-up-comings'],
     async () => {
       return await apiClient.get(`movie/upcoming?language=en-US&page=1`);
     },
-    { retry: false, refetchInterval: 10000 },
+    { retry: false, cacheTime: 10000 },
   );
 
   return (

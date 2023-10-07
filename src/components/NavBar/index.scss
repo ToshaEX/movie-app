@@ -2,7 +2,7 @@
   background-color: black;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   color: white;
   font-weight: 600;
@@ -12,6 +12,7 @@
 .navbar-item {
   text-decoration: none;
   color: white;
+  font-size: 1.4rem;
   padding: 1rem;
   transition: all;
   transition-duration: 700ms;

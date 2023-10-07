@@ -1,11 +1,10 @@
 import React, { Suspense, lazy } from 'react';
+import Loading from '../components/Loading';
 import './index.scss';
 
-const Loading = lazy(() => import('../components/Loading'));
 const NavBar = lazy(() => import('../components/NavBar'));
 
 const Layout = ({ children, isLoading }) => {
-  console.log(isLoading);
   return (
     <main className="main-outer">
       <NavBar />
