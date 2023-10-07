@@ -1,0 +1,22 @@
+.movies-header {
+  font-size: xx-large;
+  font-weight: 800;
+  padding: 2rem;
+}
+
+.movies-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies-container {
+  display: grid;
+  gap: 1rem;
+  width: 90vw;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fill, 300px);
+  padding-bottom: 2rem;
+}

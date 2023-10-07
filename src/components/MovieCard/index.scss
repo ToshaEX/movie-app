@@ -1,0 +1,26 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border: 0.1rem solid gray;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  transition: all;
+  transition-duration: 700ms;
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  }
+}
+.card-image {
+  border-radius: 1rem;
+}
+.card-description {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+  justify-content: start;
+}
+.card-title {
+  color: rgb(110, 110, 110);
+  font-weight: 600;
+}
