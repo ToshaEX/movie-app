@@ -17,7 +17,14 @@ const UpComingMovie = () => {
   return (
     <Layout isLoading={isLoading}>
       <div className="up-coming-container">
-        <Carousel showArrows useKeyboardArrows autoPlay interval={3000}>
+        <Carousel
+          showArrows
+          useKeyboardArrows
+          autoPlay
+          interval={3000}
+          width={'100%'}
+          infiniteLoop
+        >
           {data?.data?.results.map((item, i) => (
             <div key={`carousel-${i}`}>
               <img
