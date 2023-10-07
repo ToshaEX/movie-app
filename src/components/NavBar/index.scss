@@ -1,0 +1,22 @@
+.navbar-outer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  font-size: medium;
+  width: 100vw;
+  height: 8vh;
+}
+.navbar-item {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  transition: all;
+  transition-duration: 700ms;
+  &:hover {
+    color: gray;
+  }
+}
